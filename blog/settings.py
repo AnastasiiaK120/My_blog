@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'django.contrib.sites',
+    'rest_framework_swagger',
 
     'rest_framework',
     'rest_framework.authtoken',
@@ -155,3 +156,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 SIDE_ID = 1
 
 REST_FRAMEWORK = { 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'}
+
+SWAGGER_SETTINGS = {
+    'LOGIN_URL': 'rest_framework:login',
+    'LOGOUT_URL': 'rest_framework:logout',
+}
